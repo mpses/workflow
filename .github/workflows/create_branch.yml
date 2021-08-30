@@ -7,7 +7,7 @@ on:
 
 jobs:
   create_branch:
-    if: (github.event.issue.issue != null) && startsWith(github.event.comment.body, "/b ")
+    if: (github.event.issue.issue != null) && startsWith(github.event.comment.body, '/b ')
     runs-on: ubuntu-latest
 
     steps:
