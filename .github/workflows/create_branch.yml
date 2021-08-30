@@ -16,7 +16,7 @@ jobs:
         shell: bash
         run: |
           sep=(${{ github.event.comment.body }})
-          echo "::set-output name=BRANCHNAME::${sep[1]}/#${{ github.event.issue.number }}"
+          echo "::set-output name=BRANCHNAME::${sep[1]}/#${{ github.event.issue.number }}_${${{ github.event.comment.body }}#/b ${sep[1]} }"
       - name: Create branch
         uses: peterjgrainger/action-create-branch@v2.0.1
         env:
